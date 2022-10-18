@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Animated squares background</title>
+</head>
+<body>
+  <script>
+    function squares() {
+      let amount = 378
+      let body = document.querySelector('body')
+
+      // Generating ${amount} of squares
+      for (let index = 0; index < amount; index++) {
+        let square = document.createElement('i')
+
+        // Generating a random number from 1 to 25
+        square.style.setProperty('--i', Math.random() * 50 + 1)
+
+        body.appendChild(square)
+      }
+    }
+
+    squares()
+  </script>
+</body>
+</html>
